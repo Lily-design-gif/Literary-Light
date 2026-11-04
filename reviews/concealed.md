@@ -1,0 +1,10 @@
+---
+title: Concealed
+author: "Sammy Sutton "
+cover: /media/covers/1000265237.png
+category: Christian Dystopian Thriller
+date: 2026-11-04
+---
+*Concealed* opens with Johanna Mueller, a former Pentagon analyst, watching a man named Jan Assur on television and understanding exactly what he is. The prologue does a lot of work efficiently: it establishes the conspiracy, the personal cost (her son has been turned against her), and a world already sliding toward control dressed up as compassion. From there the novel shifts into Michael Levine's voice, and the early chapters settle into a rhythm that suits the material—the bunker scenes are tense and claustrophobic, and the first drone flight over Corpus Christi gives a strong sense of scale without overselling it. The dialogue does the heavy lifting when it needs to. Michael's technical stubbornness and Johanna's quiet certainty clash in a way that feels earned rather than staged, especially in Chapter 2, where their argument about instruments and limits is sharp and believable. Johanna's lines about the "original script" could easily have sounded preachy, but the pushback Michael gives her keeps the exchange grounded.
+
+The pacing isn't perfect; a few middle chapters stretch the group's routines, and the repeated pattern of camp, convergence point, and attack starts to show its seams, but the story rarely loses momentum, and the transitions between bunker survival and the larger convergence points feel deliberate. The early chapters in particular earn their tension by keeping the stakes human: air running out, a baby in the back of the truck, people sorting pebbles. The introduction of Crowe and Cross is handled well, too; two factions with different hungers, sketched quickly and clearly enough that you understand why neither can be trusted. The quiet moments between Michael and Johanna; the tea, the catwalk conversation, give the action something to rest against, and they don't feel like filler. It's a solid opening to a story with a lot of moving parts, and it earns the right to keep going.
