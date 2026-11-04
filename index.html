@@ -1,0 +1,344 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Literary Light is an independent literary magazine celebrating books, authors and thoughtful reading.">
+<title>Literary Light | An Independent Literary Magazine</title>
+<style>
+:root{--cream:#f8f5ed;--paper:#fffefa;--green:#254b3b;--dark:#292d29;--gold:#b58b50;--muted:#77766e;--line:#e5dfd3}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;background:var(--cream);color:var(--dark);font-family:Georgia,serif;line-height:1.7}
+a{color:inherit}
+header{background:var(--paper);border-bottom:1px solid var(--line)}
+.head{max-width:1200px;margin:auto;padding:22px;display:flex;justify-content:space-between;align-items:center;gap:20px;flex-wrap:wrap}
+.logo{font-size:28px;font-weight:bold;letter-spacing:2px;color:var(--green);text-decoration:none}
+.logo small{display:block;font:10px Arial;letter-spacing:3px;color:var(--gold)}
+nav{display:flex;gap:13px;flex-wrap:wrap}
+nav a{text-decoration:none;font:13px Arial}
+nav a:hover{color:var(--gold)}
+.hero{background:var(--green);color:white;text-align:center;padding:85px 20px}
+.eyebrow{font:12px Arial;letter-spacing:4px;color:#e6c99b}
+.hero h1{font-size:clamp(40px,7vw,72px);font-weight:normal;line-height:1.12;margin:20px}
+.hero p{max-width:680px;margin:0 auto 25px;color:#eee8dc;font-size:18px}
+.btn{display:inline-block;padding:12px 23px;background:var(--gold);color:white;text-decoration:none;font:13px Arial;border:0;cursor:pointer}
+.btn:hover{opacity:.85}
+section{max-width:1150px;margin:auto;padding:65px 22px;scroll-margin-top:20px}
+.heading{text-align:center;margin-bottom:32px}
+.heading small{font:11px Arial;letter-spacing:3px;color:var(--gold)}
+.heading h2{font-size:35px;font-weight:normal;color:var(--green);margin:7px}
+.heading p{color:var(--muted);margin:0}
+.intro{max-width:780px;text-align:center;margin:auto;font-size:18px}
+.band{background:#eee9dd}
+.band section{padding-top:55px;padding-bottom:55px}
+.grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:22px}
+.card{background:var(--paper);border:1px solid var(--line);padding:18px}
+.cover{height:235px;display:flex;align-items:center;justify-content:center;text-align:center;padding:20px;color:white;background:linear-gradient(145deg,#254b3b,#b58b50);margin-bottom:16px}
+.cover span{font-size:23px;line-height:1.3;max-width:210px}
+.card h3{color:var(--green);font-size:21px;margin:5px 0}
+.card p{font-size:14px;color:var(--muted)}
+.author{font-style:italic}
+.category{font:10px Arial;letter-spacing:2px;color:var(--gold);text-transform:uppercase}
+.search{display:block;width:100%;max-width:550px;margin:0 auto 25px;padding:13px;border:1px solid var(--line);font:15px Arial}
+.tags{text-align:center;margin-bottom:25px}
+.tags button{padding:8px 13px;margin:4px;border:1px solid var(--green);background:transparent;color:var(--green);cursor:pointer}
+.tags button.active,.tags button:hover{background:var(--green);color:white}
+.notice{background:var(--paper);padding:25px;border:1px solid var(--line);text-align:center;margin-top:22px}
+.two{display:grid;grid-template-columns:1fr 1fr;gap:25px}
+.panel{background:var(--paper);border:1px solid var(--line);padding:25px}
+.panel h3{color:var(--green)}
+form{max-width:720px;margin:25px auto;background:var(--paper);padding:25px;border:1px solid var(--line);display:grid;gap:13px}
+label{font:13px Arial;color:var(--green)}
+input,select,textarea{width:100%;padding:13px;border:1px solid var(--line);background:white;font:14px Arial}
+textarea{min-height:120px}
+footer{background:var(--green);color:white;text-align:center;padding:40px 20px}
+footer a{color:#e6c99b}
+footer p{font-size:13px}
+@media(max-width:760px){.head{flex-direction:column;align-items:flex-start}.grid{grid-template-columns:repeat(2,minmax(0,1fr))}.two{grid-template-columns:1fr}}
+@media(max-width:480px){.grid{grid-template-columns:1fr}nav{gap:10px}nav a{font-size:12px}section{padding:45px 16px}.hero{padding:60px 17px}}
+</style>
+</head>
+<body>
+
+<header>
+<div class="head">
+<a class="logo" href="#home">LITERARY LIGHT<small>AN INDEPENDENT LITERARY MAGAZINE</small></a>
+<nav>
+<a href="#home">Home</a>
+<a href="#reviews">Reviews</a>
+<a href="#fiction">Fiction</a>
+<a href="#nonfiction">Nonfiction</a>
+<a href="#christian">Christian</a>
+<a href="#children">Children & YA</a>
+<a href="#spotlights">Authors</a>
+<a href="#interviews">Interviews</a>
+<a href="#about">About</a>
+<a href="#submissions">Submissions</a>
+<a href="#beta">Beta Reading</a>
+<a href="#contact">Contact</a>
+</nav>
+</div>
+</header>
+
+<main>
+<div class="hero" id="home">
+<div class="eyebrow">READ · DISCOVER · CONNECT</div>
+<h1>Where Every Book<br>Finds Its Light</h1>
+<p>A literary home for thoughtful readers, remarkable books and the voices behind the pages.</p>
+<a class="btn" href="#reviews">EXPLORE THE MAGAZINE</a>
+<a class="btn" href="#submissions">SUBMIT YOUR BOOK</a>
+</div>
+
+<section>
+<div class="intro">
+<div class="heading"><small>WELCOME TO LITERARY LIGHT</small><h2>A World Between the Pages</h2></div>
+We celebrate the written word through independent book coverage, literary discoveries, author conversations and a love of reading. Whether you are a reader searching for your next favourite book or an author sharing your work, there is a place for you here.
+</div>
+</section>
+
+<div class="band">
+<section id="reviews">
+<div class="heading"><small>THE READING ROOM</small><h2>Book Reviews & Discoveries</h2><p>Thoughtful reading and independent literary perspectives.</p></div>
+<input class="search" id="search" type="search" placeholder="Search books or authors..." aria-label="Search books">
+<div class="tags">
+<button class="active" data-filter="all">All</button>
+<button data-filter="Fiction">Fiction</button>
+<button data-filter="Nonfiction">Nonfiction</button>
+<button data-filter="Memoir">Memoir</button>
+<button data-filter="Poetry">Poetry</button>
+</div>
+<div class="grid" id="book-grid">
+
+<article class="card" data-category="Poetry" data-search="Catalog of Unabashed Gratitude Ross Gay">
+<div class="cover"><span>Catalog of<br>Unabashed Gratitude</span></div>
+<div class="category">Poetry · Featured discovery</div>
+<h3>Catalog of Unabashed Gratitude</h3><p class="author">Ross Gay</p>
+<p>A poetry collection to explore for its attention to gratitude, joy and the ordinary details of life.</p>
+</article>
+
+<article class="card" data-category="Memoir" data-search="The Hollow Half Sarah Aziza">
+<div class="cover"><span>The Hollow Half</span></div>
+<div class="category">Memoir · Featured discovery</div>
+<h3>The Hollow Half</h3><p class="author">Sarah Aziza</p>
+<p>A literary memoir discovery exploring identity, family and belonging.</p>
+</article>
+
+<article class="card" data-category="Fiction" data-search="Ghost Season Fatin Abbas">
+<div class="cover"><span>Ghost Season</span></div>
+<div class="category">Fiction · Featured discovery</div>
+<h3>Ghost Season</h3><p class="author">Fatin Abbas</p>
+<p>A novel set against a complex landscape of conflict, memory and human connection.</p>
+</article>
+
+<article class="card" data-category="Fiction" data-search="The Davenports Krystal Marquis">
+<div class="cover"><span>The Davenports</span></div>
+<div class="category">Fiction · Featured discovery</div>
+<h3>The Davenports</h3><p class="author">Krystal Marquis</p>
+<p>A historical young adult novel following love, ambition and society in early twentieth-century Chicago.</p>
+</article>
+
+<article class="card" data-category="Fiction" data-search="The Employees Olga Ravn">
+<div class="cover"><span>The Employees</span></div>
+<div class="category">Fiction · Featured discovery</div>
+<h3>The Employees</h3><p class="author">Olga Ravn</p>
+<p>An unusual work of speculative fiction examining work, humanity and technology.</p>
+</article>
+
+<article class="card" data-category="Fiction" data-search="Misinterpretation Ledia Xhoga">
+<div class="cover"><span>Misinterpretation</span></div>
+<div class="category">Fiction · Featured discovery</div>
+<h3>Misinterpretation</h3><p class="author">Ledia Xhoga</p>
+<p>A contemporary literary fiction discovery about perception and the stories people tell.</p>
+</article>
+
+<article class="card" data-category="Memoir" data-search="Revathi A Life in Trans Activism A Revathi">
+<div class="cover"><span>Revathi<br>A Life in Trans Activism</span></div>
+<div class="category">Memoir · Featured discovery</div>
+<h3>Revathi: A Life in Trans Activism</h3><p class="author">A. Revathi</p>
+<p>A memoir documenting a life of activism, courage and the pursuit of dignity.</p>
+</article>
+
+<article class="card" data-category="Fiction" data-search="The Mountains Sing Nguyen Phan Que Mai">
+<div class="cover"><span>The Mountains Sing</span></div>
+<div class="category">Fiction · Featured discovery</div>
+<h3>The Mountains Sing</h3><p class="author">Nguyễn Phan Quế Mai</p>
+<p>A multigenerational family story shaped by the history of Vietnam.</p>
+</article>
+
+<article class="card" data-category="Memoir" data-search="The Girl I Am Was and Never Will Be Shannon Gibney">
+<div class="cover"><span>The Girl I Am,<br>Was, and Never Will Be</span></div>
+<div class="category">Memoir · Featured discovery</div>
+<h3>The Girl I Am, Was, and Never Will Be</h3><p class="author">Shannon Gibney</p>
+<p>A hybrid memoir exploring identity, adoption, family and belonging.</p>
+</article>
+
+<article class="card" data-category="Fiction" data-search="The Space Between Worlds Micaiah Johnson">
+<div class="cover"><span>The Space<br>Between Worlds</span></div>
+<div class="category">Fiction · Featured discovery</div>
+<h3>The Space Between Worlds</h3><p class="author">Micaiah Johnson</p>
+<p>A speculative fiction novel exploring alternate worlds, identity and possibility.</p>
+</article>
+</div>
+<div class="notice">These are featured book discoveries, not published reviews. Editorial reviews will be added as they are completed.</div>
+</section>
+</div>
+
+<section id="fiction">
+<div class="heading"><small>IMAGINED WORLDS</small><h2>Fiction</h2><p>Stories that transport, challenge and stay with us.</p></div>
+<p class="intro">Discover novels, short stories, literary fiction and imaginative writing from emerging and established voices.</p>
+</section>
+
+<div class="band">
+<section id="nonfiction">
+<div class="heading"><small>REAL LIVES · REAL IDEAS</small><h2>Nonfiction</h2><p>Books that inform, illuminate and expand our understanding.</p></div>
+<p class="intro">Memoirs, biographies, history, culture, personal development and thought-provoking nonfiction.</p>
+</section>
+</div>
+
+<section id="christian">
+<div class="heading"><small>FAITH & REFLECTION</small><h2>Christian Books</h2><p>Writing that explores faith, spiritual growth and Christian living.</p></div>
+<p class="intro">A space for Christian literature, devotionals, biblical reflections, testimonies and books that encourage thoughtful engagement with faith.</p>
+</section>
+
+<div class="band">
+<section id="children">
+<div class="heading"><small>YOUNG READERS</small><h2>Children & Young Adult</h2><p>Stories for curious minds and growing imaginations.</p></div>
+<p class="intro">Discover picture books, middle-grade adventures, young adult fiction and stories that inspire young readers.</p>
+</section>
+</div>
+
+<section id="spotlights">
+<div class="heading"><small>THE PEOPLE BEHIND THE PAGES</small><h2>Author Spotlights</h2><p>Discover the writers, ideas and experiences behind remarkable books.</p></div>
+<div class="notice">Author features and profiles will be published here. Authors and publishers are welcome to get in touch.</div>
+</section>
+
+<div class="band">
+<section id="interviews">
+<div class="heading"><small>IN CONVERSATION</small><h2>Literary Interviews</h2><p>Conversations about books, writing, inspiration and the creative process.</p></div>
+<div class="notice">Our literary interview series is coming soon. Authors interested in being featured may contact the editorial team.</div>
+</section>
+</div>
+
+<section id="about">
+<div class="heading"><small>OUR STORY</small><h2>About Literary Light</h2></div>
+<div class="intro">
+Literary Light is an independent literary magazine created to celebrate books, thoughtful reading and the people who bring stories to life.
+<p>We share literary discoveries, book coverage, author conversations and opportunities for readers and writers to connect.</p>
+<p>Our aim is to create a welcoming space where diverse voices and meaningful stories can find an audience.</p>
+</div>
+</section>
+
+<div class="band">
+<section id="submissions">
+<div class="heading"><small>FOR AUTHORS & PUBLISHERS</small><h2>Submit Your Book</h2><p>We welcome enquiries from authors, publishers and literary representatives.</p></div>
+<div class="two">
+<div class="panel">
+<h3>What you can submit</h3>
+<ul>
+<li>Books for editorial review consideration</li>
+<li>Author spotlight proposals</li>
+<li>Literary interview enquiries</li>
+<li>Publisher and publicist introductions</li>
+</ul>
+</div>
+<div class="panel">
+<h3>Submission guidelines</h3>
+<p>Please provide accurate book details, a short description and your contact information. Submissions are considered at the editorial team's discretion.</p>
+<p>Submitting a book does not guarantee publication or a review.</p>
+</div>
+</div>
+<form id="submission-form">
+<label>Your name<input name="name" required></label>
+<label>Email address<input name="email" type="email" required></label>
+<label>Book title<input name="title" required></label>
+<label>Author name<input name="author" required></label>
+<label>Genre
+<select name="genre">
+<option>Fiction</option><option>Nonfiction</option><option>Christian</option><option>Children & Young Adult</option><option>Poetry</option><option>Memoir</option><option>Other</option>
+</select></label>
+<label>Book description<textarea name="description" required></textarea></label>
+<label>Book or publisher website (optional)<input name="website" type="url"></label>
+<button class="btn" type="submit">SEND BOOK ENQUIRY</button>
+<p class="small">Your email application will open with your submission details ready to send.</p>
+</form>
+</section>
+</div>
+
+<section id="beta">
+<div class="heading"><small>EDITORIAL SERVICES</small><h2>Beta Reading & Manuscript Feedback</h2><p>Thoughtful feedback for writers developing their work.</p></div>
+<div class="intro">
+Literary Light welcomes enquiries about beta reading, manuscript evaluation and editorial feedback.
+<p>Writers interested in these services can contact us with a brief description of their project and the kind of feedback they need.</p>
+<a class="btn" href="mailto:lilyandrews965@gmail.com?subject=Beta%20Reading%20Enquiry">ENQUIRE ABOUT BETA READING</a>
+</div>
+</section>
+
+<div class="band">
+<section id="contact">
+<div class="heading"><small>GET IN TOUCH</small><h2>Contact the Editorial Team</h2><p>We would love to hear from readers, authors and publishers.</p></div>
+<div class="intro">
+<p><strong>Email:</strong> <a href="mailto:lilyandrews965@gmail.com">lilyandrews965@gmail.com</a></p>
+<p>For book submissions, author features, interviews and general enquiries, please contact Literary Light by email.</p>
+<a class="btn" href="mailto:lilyandrews965@gmail.com">EMAIL LITERARY LIGHT</a>
+</div>
+</section>
+</div>
+
+</main>
+
+<footer>
+<div style="font-size:25px;letter-spacing:2px">LITERARY LIGHT</div>
+<p>An Independent Literary Magazine</p>
+<p>Read · Discover · Connect</p>
+<p><a href="mailto:lilyandrews965@gmail.com">lilyandrews965@gmail.com</a></p>
+<p>© <span id="year"></span> Literary Light. All rights reserved.</p>
+</footer>
+
+<script>
+const search=document.getElementById("search");
+const cards=[...document.querySelectorAll("#book-grid .card")];
+let activeFilter="all";
+
+function filterBooks(){
+ const term=search.value.toLowerCase().trim();
+ cards.forEach(card=>{
+  const category=card.dataset.category;
+  const words=(card.dataset.search+" "+card.innerText).toLowerCase();
+  const matchesTerm=words.includes(term);
+  const matchesCategory=activeFilter==="all"||category===activeFilter;
+  card.style.display=matchesTerm&&matchesCategory?"":"none";
+ });
+}
+search.addEventListener("input",filterBooks);
+
+document.querySelectorAll(".tags button").forEach(button=>{
+ button.addEventListener("click",()=>{
+  document.querySelectorAll(".tags button").forEach(b=>b.classList.remove("active"));
+  button.classList.add("active");
+  activeFilter=button.dataset.filter;
+  filterBooks();
+ });
+});
+
+document.getElementById("year").textContent=new Date().getFullYear();
+
+document.getElementById("submission-form").addEventListener("submit",function(event){
+ event.preventDefault();
+ const f=event.currentTarget;
+ const fields=["name","email","title","author","genre","description","website"];
+ const labels=["Name","Email","Book title","Author","Genre","Description","Website"];
+ const lines=fields.map((key,i)=>{
+  const field=f.elements.namedItem(key);
+  return labels[i]+": "+(field?field.value:"");
+ });
+ const subject=encodeURIComponent("Book submission: "+f.elements.namedItem("title").value);
+ const body=encodeURIComponent(lines.join("\n\n"));
+ window.location.href="mailto:lilyandrews965@gmail.com?subject="+subject+"&body="+body;
+});
+</script>
+
+</body>
+  </html>
+  
