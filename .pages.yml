@@ -1,0 +1,60 @@
+
+media:
+  input: media/covers
+  output: /media/covers
+  extensions:
+    - jpg
+    - jpeg
+    - png
+    - webp
+  rename: safe
+
+content:
+  - name: reviews
+    label: Book Reviews
+    type: collection
+    path: reviews
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      primary: title
+      fields:
+        - title
+        - author
+        - category
+        - date
+      sort: date
+      order: desc
+    fields:
+      - name: title
+        label: Book Title
+        type: string
+        required: true
+
+      - name: author
+        label: Book Author
+        type: string
+        required: true
+
+      - name: cover
+        label: Book Cover
+        type: image
+        options:
+          path: media/covers
+
+      - name: category
+        label: Category
+        type: string
+
+      - name: date
+        label: Review Date
+        type: date
+
+      - name: excerpt
+        label: Short Introduction
+        type: text
+
+      - name: body
+        label: Full Review
+        type: rich-text
+        
