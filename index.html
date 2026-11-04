@@ -337,6 +337,66 @@ document.getElementById("submission-form").addEventListener("submit",function(ev
  const body=encodeURIComponent(lines.join("\n\n"));
  window.location.href="mailto:lilyandrews965@gmail.com?subject="+subject+"&body="+body;
 });
+async function loadPublishedReviews() {
+  const url = "https://raw.githubusercontent.com/Lily-design-gif/Literary-Light/main/reviews/concealed.md";
+
+  try {
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Could not load reviews");
+
+    const markdown = await response.text();
+    const match = markdown.match(/^---\s*([\s\S]*?)\s*---\s*([\s\S]*)$/);
+    if (!match) return;
+
+    const metadata = {};
+    match[1].split("\n").forEach(line => {
+      const item = line.match(/^([^:]+):\s*(.*)$/);
+      if (item) metadata[item[1].trim()] = item[2].trim().replace(/^["']|["']$/g, "");
+    });
+
+    const body = match[2].trim();
+    const grid = document.getElementById("book-grid");
+
+    const card = document.createElement("article");
+    card.className = "card";
+    card.dataset.category = metadata.category || "";
+    card.dataset.search = (metadata.title + " " + metadata.author).toLowerCase();
+
+    const cover = document.createElement("img");
+    cover.src = metadata.cover;
+    cover.alt = metadata.title + " book cover";
+    cover.style.cssText = "width:100%;height:235px;object-fit:contain;margin-bottom:16px";
+
+    const category = document.createElement("div");
+    category.className = "category";
+    category.textContent = metadata.category || "Book Review";
+
+    const title = document.createElement("h3");
+    title.textContent = metadata.title;
+
+    const author = document.createElement("p");
+    author.className = "author";
+    author.textContent = metadata.author;
+
+    const intro = document.createElement("p");
+    intro.textContent = body.slice(0, 240) + "...";
+
+    const fullReview = document.createElement("details");
+    const summary = document.createElement("summary");
+    summary.textContent = "Read full review";
+    const reviewText = document.createElement("p");
+    reviewText.textContent = body;
+    fullReview.append(summary, reviewText);
+
+    card.append(cover, category, title, author, intro, fullReview);
+    grid.prepend(card);
+  } catch (error) {
+    console.error("Review loading error:", error);
+  }
+}
+
+loadPublishedReviews();
+ 
 </script>
 
 </body>
