@@ -1,7 +1,7 @@
 
 media:
-  input: media/covers
-  output: /media/covers
+  input: media
+  output: /media
   extensions:
     - jpg
     - jpeg
@@ -30,31 +30,121 @@ content:
         label: Book Title
         type: string
         required: true
-
       - name: author
         label: Book Author
         type: string
         required: true
-
       - name: cover
         label: Book Cover
         type: image
         options:
           path: media/covers
-
       - name: category
         label: Category
         type: string
-
       - name: date
         label: Review Date
         type: date
-
       - name: excerpt
         label: Short Introduction
         type: text
-
       - name: body
         label: Full Review
+        type: rich-text
+
+  - name: recommendations
+    label: Book Recommendations
+    type: collection
+    path: recommendations
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      primary: title
+      fields:
+        - title
+        - author
+        - category
+    fields:
+      - name: title
+        label: Book Title
+        type: string
+        required: true
+      - name: author
+        label: Author
+        type: string
+        required: true
+      - name: cover
+        label: Book Cover
+        type: image
+        options:
+          path: media/covers
+      - name: category
+        label: Category
+        type: string
+      - name: description
+        label: Why We Recommend This Book
+        type: rich-text
+
+  - name: spotlights
+    label: Author Spotlights
+    type: collection
+    path: spotlights
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      primary: author
+      fields:
+        - author
+        - book
+    fields:
+      - name: author
+        label: Author Name
+        type: string
+        required: true
+      - name: book
+        label: Featured Book
+        type: string
+      - name: photo
+        label: Author Photo
+        type: image
+        options:
+          path: media/authors
+      - name: biography
+        label: Author Biography
+        type: rich-text
+      - name: feature
+        label: Author Spotlight
+        type: rich-text
+
+  - name: interviews
+    label: Literary Interviews
+    type: collection
+    path: interviews
+    format: yaml-frontmatter
+    filename: "{primary}.md"
+    view:
+      primary: title
+      fields:
+        - title
+        - author
+    fields:
+      - name: title
+        label: Interview Title
+        type: string
+        required: true
+      - name: author
+        label: Author Name
+        type: string
+        required: true
+      - name: photo
+        label: Author Photo
+        type: image
+        options:
+          path: media/authors
+      - name: introduction
+        label: Introduction
+        type: text
+      - name: questions_answers
+        label: Interview Questions and Answers
         type: rich-text
         
